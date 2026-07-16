@@ -29,9 +29,29 @@ conn = get_conn()
 # ---------------------------------------------------------
 st.markdown("""
 <style>
-    .stApp { background-color: #241226; color: #f7ede8; }
-    h1, h2, h3 { font-family: Georgia, serif; }
-    .stSlider label, .stTextArea label { color: #f2c4ce !important; }
+    .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+        background-color: #241226;
+        color: #f7ede8;
+    }
+    h1, h2, h3, h4, p, li, span, label, div {
+        color: #f7ede8 !important;
+    }
+    [data-testid="stMetricValue"], [data-testid="stMetricLabel"], [data-testid="stMetricDelta"] {
+        color: #f7ede8 !important;
+    }
+    [data-testid="stMetric"] {
+        background-color: #3d2340;
+        border-radius: 12px;
+        padding: 10px;
+    }
+    div[data-baseweb="notification"], .stAlert, .stSuccess, .stInfo, .stWarning {
+        background-color: #3d2340 !important;
+        color: #f7ede8 !important;
+    }
+    .stTextArea textarea, .stTextInput input {
+        background-color: #3d2340 !important;
+        color: #f7ede8 !important;
+    }
     div.stButton > button {
         background-color: #c97b92;
         color: #241226;
@@ -41,6 +61,7 @@ st.markdown("""
         padding: 0.6rem 1.4rem;
     }
     div.stButton > button:hover { background-color: #e8b86d; color: #241226; }
+    div.stButton > button p { color: #241226 !important; }
 </style>
 """, unsafe_allow_html=True)
 
